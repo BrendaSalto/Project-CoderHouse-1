@@ -2,11 +2,11 @@
     let apellido = prompt("Ingrese su apellido");
 
     function saludar(){
-        alert("Hola "+nombre.toUpperCase()+" "+apellido.toUpperCase()+" bienvenido/a a SalAcolchados");
-        while(nombre === "" || apellido=== ""){
+        while(nombre === "" || !isNaN(nombre) || apellido=== "" || !isNaN(apellido)){
             nombre = prompt("Por favor ingrese su nombre");
             apellido = prompt("Por favor ingrese su apellido");
         }
+        alert("Hola "+nombre.toUpperCase()+" "+apellido.toUpperCase()+" bienvenido/a a SalAcolchados");
     }
     saludar()
 
@@ -18,15 +18,11 @@
       }
     };
 
-    //genero un array vacio
     const arrayAcolchados = [];
-
-    //creo los productos
     const tipo1 = new Acolchado(1, "Infantiles", 500);
     const tipo2 = new Acolchado(2, "Adolescentes", 700);
     const tipo3 = new Acolchado(3, "Adultos", 900);
 
-    //genero un nuevo array con los productos
     arrayAcolchados.push(tipo1,tipo2,tipo3);
 
     const ordenarMenorMayor = () => {
@@ -51,10 +47,10 @@
 
         do {
             productoTipo = prompt ("¿Qué tipo de acolchado deseas comprar? : \n1) Infantiles\n2) Adolescentes\n3) Adultos");
-            console.log("El tipo de producto elegido es: "+productoTipo+" (1:Infantiles - 2:Adolescentes - 3:Adultos)"); //imprimo para ver qué almacena
+            console.log("El tipo de producto elegido es: "+productoTipo+" (1:Infantiles - 2:Adolescentes - 3:Adultos)");
 
             productoCantidad = parseInt(prompt("¿Cuántos deseas comprar?"));
-            console.log("La cantidad elegida fue de: "+productoCantidad); //imprimo en consola para ver qué va almacenando
+            console.log("La cantidad elegida fue de: "+productoCantidad);
 
             while (Number.isNaN(productoCantidad)){
                 productoCantidad = parseInt(prompt("¿Cuántos deseas comprar?"));
@@ -69,17 +65,16 @@
                 alert ("El tipo de acolchado ingresado no se encuentra.")
             }
             
-            otroProducto=confirm(nombre+" ¿Querés seguir comprando?");
+            otroProducto=confirm(nombre.toUpperCase()+" ¿Querés seguir comprando?");
         } while(otroProducto);
         
         obtenerDescuento(total);
-
 };
 
 const obtenerDescuento = (total) => {
     if (total >= 5000) {
         total = total * 0.80;
-        alert('Tenes un descuento del 20%!');
+        alert('¡Tenes un descuento del 20%!');
     }
     obtenerPrecioDeEnvio(total);
 };
@@ -94,13 +89,13 @@ const obtenerPrecioDeEnvio = (total) => {
         alert('El envío cuesta $800. El total de tu compra es: $'+total+".-");
         alert("¡QUE DISFRUTES TU COMPRA!");
     } else {
-        alert('El total de la compra es: $'+total+".-");
+        alert('Deberá retirarlo en el local. El total de la compra es: $'+total+".-");
         alert("¡QUE DISFRUTES TU COMPRA!");
     }
 }
 
 const comprar = () => {
-    if (confirm(nombre+' ¿Querés ordenar la lista de productos del más barato al más caro?')) {
+    if (confirm(nombre.toUpperCase()+' ¿Querés ordenar la lista de productos del más barato al más caro?')) {
         ordenarMenorMayor();
     } else {
         ordenarMayorMenor();
@@ -109,63 +104,3 @@ const comprar = () => {
 };
 
 comprar();
-
-//     function seleccionarTipo() {
-//         let  tipoDeAcolchadosId;
-
-//         do{
-//             tipoDeAcolchadosId = prompt("¿Qué tipo de acolchado deseas comprar? : \n1) Infantiles\n2) Adolescentes\n3) Adultos")
-        
-//         }while( tipoDeAcolchadosId != 1 &&  tipoDeAcolchadosId !=2 &&  tipoDeAcolchadosId !=3)
-
-//         switch(tipoDeAcolchadosId){
-//             case "1":
-//             return "Infantiles";
-//             case "2":
-//             return "Adolescentes";
-//             case "3":
-//             return "Adultos";
-//         }
-//     }
-
-//     function validarPrecio(tipo) {
-//         if(tipo === "Infantiles"){
-//             return 500;
-//         }else if(tipo === "Adolescentes"){
-//             return 700;
-//         }else if(tipo === "Adultos"){
-//             return 900
-//         }
-// }
-
-//     function cobrarAcolchado (tipo,precio){
-//     alert("Usted eligió : "+tipo.toUpperCase()+".\n\n\nEl precio del acolchado es de $"+precio+" (+ el costo de envío de $200 para compras menores a $700.-)");
-
-//     let pago = prompt("¿Con cuánto abona?");
-
-//     if(precio < pago ){
-//         alert("Su vuelto es $"+(pago - precio))
-//     }
-//     else if(precio == pago){
-//         alert("Está pagando exacto ¡Muchas gracias!");
-//     }else{
-//         alert("Su pago no es suficiente");
-//             do{
-//                 pago = prompt("Debe ingresar un monto igual o mayor al valor de su compra")
-//                 }
-//                 while(precio > pago);
-//     }
-//     }
-
-//     let tipoAcolchado =  seleccionarTipo();
-//     let precioAcolchado = validarPrecio(tipoAcolchado);
-//     cobrarAcolchado(tipoAcolchado,precioAcolchado)
-
-//     function envio() {
-//         if (precioAcolchado >= 700) {
-//             alert("El costo del envío es gratuito.\n\n¡QUE DISFRUTE SU COMPRA!");
-//         } else {
-//             alert("El costo del envío es de $200. Deberá abonarlo al recibir el producto.\n\n¡Muchas gracias por su compra!");
-//         }
-//     }
-//     envio();
