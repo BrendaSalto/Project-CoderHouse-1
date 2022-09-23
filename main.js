@@ -71,6 +71,7 @@
         obtenerDescuento(total);
 };
 
+
 const obtenerDescuento = (total) => {
     if (total >= 5000) {
         total = total * 0.80;
@@ -79,12 +80,15 @@ const obtenerDescuento = (total) => {
     obtenerPrecioDeEnvio(total);
 };
 
+
 const obtenerPrecioDeEnvio = (total) => {
+   // let pago = parseInt(prompt("¿Con cuánto abonas?")); --> para desarrollar, todavía no lo pude implementar
     let confirmacion = confirm('¿Queres envío a domicilio?');
-    if (confirmacion && total >= 2000) {
-        alert('Tenes envío gratis. El total de tu compra es: $'+total+".-");
+    if (confirmacion && total >= 2000 /*&& total <= pago*/) {
+        alert("Tenes envío gratis. El total de tu compra es: $"+total+".-");
+        //alert("Tu vuelto es:"+pago-total+".-");
         alert("¡QUE DISFRUTES TU COMPRA!");
-    } else if (confirmacion && total < 2000 && total !== 0) {
+    } else if (confirmacion && total < 2000 && total !== 0 /*&& total<pago*/) {
         total = total + 800;
         alert('El envío cuesta $800. El total de tu compra es: $'+total+".-");
         alert("¡QUE DISFRUTES TU COMPRA!");
