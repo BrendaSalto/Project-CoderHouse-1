@@ -1,0 +1,93 @@
+.logo{
+    border-radius: 70%;
+    align-items: center;
+    margin-top: 10px;
+}
+.fondo-logo{
+    height: 150px;
+    background-image: url("../productos/header1.jpg");
+    padding-left: 45%;
+}
+
+.ul-nav {
+    display: block;
+    background: #0FBC99;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul :hover {
+    background: #096856;
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    width: 15%;
+}
+
+.divFormulario {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #034F40;
+}
+
+.formulario input:focus {
+    background-color: #B2DDD0;
+}
+
+.formulario input:hover {
+    background-color: #B2DDD0;
+}
+h2{
+    margin-top: 7%;
+}
+
+.divProductos {
+    background-color: aqua;
+    height: 30px;
+}
+
+#producto-contenedor {
+    overflow: hidden;
+}
+
+.card {
+    float: left;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card :hover{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: #034F40;
+    background-color: #B2DDD0;
+}
+.card-img {
+    height: 150 px;
+    width: 110px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card-body {
+    padding-left: 15px;
+}
+.modal-carrito{
+    display: flex;
+    justify-content: center;
+}
+#cerrar{
+    height: 20px;
+}

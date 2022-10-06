@@ -4,7 +4,7 @@ const productos = [
         nombre:"Hellfish-Simpsons",
         desc:"Infantil, 1 plaza 1/2",
         precio:4000,
-        img:"infantil.jpg",
+        img:"productos/infantil.jpg",
         cantidad:1
     },
     {
@@ -12,7 +12,7 @@ const productos = [
         nombre:"Lilo y stitch",
         desc:"Infantil, 1 plaza y 1/2",
         precio:4000,
-        img:"infantil2.jpg",
+        img:"productos/infantil2.jpg",
         cantidad:1
     },
     {
@@ -20,15 +20,15 @@ const productos = [
         nombre:"Stranger Things",
         desc:"adolescente, 1 plaza y 1/2",
         precio:6000,
-        img:"adolescente.jpg",
+        img:"productos/adolescente.jpg",
         cantidad:1
     },
     {
         id:4,
         nombre:"Harry Potter",
-        desc:"adolescente, 1 plaza y 1/2",
+        desc:"Adolescente, 1 plaza y 1/2",
         precio:6000,
-        img:"adolescente2.jpg",
+        img:"productos/adolescente2.jpg",
         cantidad:1
     },
     {
@@ -36,7 +36,7 @@ const productos = [
         nombre:"Pastelito horneado de canela",
         desc:"Adulto 2 plazas y 1/2",
         precio:9000,
-        img:"adulto.jpg",
+        img:"productos/adulto.jpg",
         cantidad:1
     },
     {
@@ -44,7 +44,7 @@ const productos = [
         nombre:"Homero y Marge",
         desc:"Adulto 2 plazas y 1/2",
         precio:9000,
-        img:"adulto.jpg",
+        img:"productos/adulto.jpg",
         cantidad:1
     },
 ]

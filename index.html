@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Acolchados</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Proyecto2</title>
 </head>
+
 <body>
-    <header>
-        <div class="titulo">
-            <h1>SalAcolchados</h1>
+    <div class="container">
+        <div class="fondo-logo">
+            <img src="productos/LOGO.jpg" alt="logo" class="logo">
         </div>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-<main id="producto-contenedor">
-    <div class="modal-container" id="modal_container">
-        <div class="modal-carrito">
-                <h3>Carrito</h3>
-            <button id="cerrar">Cerrar</button>
-            <div id="carrito-contenedor"></div>
+        <class="header">
+            <nav class="nav">
+                <ul class="ul-nav">
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Inicio</li>
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Quienes somos</li>
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Servicios</li>
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Productos</li>
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Sucursales</li>
+                    <li class="li-nav"><a class="a-nav" href="#"></a>Contacto</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="divFormulario">
+            <h3>Ponerse en contacto conmigo:</h3>
+            <form class="formulario">
+                <p>
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input id="formNombre" type="text" name="nombre" value="" placeholder="Ingrese nombre y apellido"
+                        required>
+                </p>
+                <p>
+                    <label for="FormEmail">E-mail:</label>
+                    <input id="email" type="email" name="email" value="" placeholder="Ingrese su email aquí" required>
+                </p>
+                <p>
+                    <label for="formTelefono">Teléfono:</label>
+                    <input id="telefono" type="telefono" name="telefono" value=""
+                        placeholder="Ingrese su teléfono aquí">
+                </p>
+                <p>
+                    <input id:"btnEnviar" type="submit" name="" value="Enviar">
+                </p>
+                <p>
+                    <input id:"btnResetear" type="reset" name="" value="Borrar">
+                </p>
+            </form>
+            <div class="productos">
+                <h2>Productos</h2>
+            </div>
         </div>
-    </div>
+        <main id="producto-contenedor">
+            <div class="modal-container" id="modal_container">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="cerrar">Cerrar</button>
+                    <div id="carrito-contenedor"></div>
+                </div>
+            </div>
 
-</main>
-    <script src="stock.js"></script>
-    <script src="carritoIndex.js" ></script>
-    <script src="main.js"></script>
+        </main>
+        <script src="productos/stock.js"></script>
+        <script src="carrito.js" ></script>
+        <script src="main.js"></script>
 </body>
+
+</html>
+<footer>
+</footer>
+</div>
+</body>
+
 </html>
