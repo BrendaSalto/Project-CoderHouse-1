@@ -21,10 +21,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav ul :hover {
-    background: #096856;
-}
-
 nav ul {
     list-style-type: none;
     overflow: hidden;

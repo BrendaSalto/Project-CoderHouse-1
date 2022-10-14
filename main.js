@@ -9,7 +9,7 @@ const mostrarProductos = (productos) => {
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">Descripción:  ${producto.desc}</p>
                                 <p class="card-text">Precio:$ ${producto.precio}</p>
-                                <button class="btn btn-primary" id=boton${producto.id}>Comprar <br>${producto.nombre}</button>
+                                <button class="btn btn-primary" id=boton${producto.id}>Comprar<br>${producto.nombre}</button>
                             </div>
                         </div>`
         contenedorProductos.appendChild(div)
@@ -17,7 +17,7 @@ const mostrarProductos = (productos) => {
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             carritoIndex(producto.id)
-            alert(`Se agregó ${producto.nombre} al carrito`)
+            swal(`Se agregó ${producto.nombre} al carrito`)
         })
 
     })
