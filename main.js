@@ -1,5 +1,8 @@
-const mostrarProductos = (productos) => {
-    const contenedorProductos = document.getElementById('producto-contenedor')
+const mostrarProductos = async () => {
+    const contenedorProductos = document.getElementById('producto-contenedor');
+
+    const productos = await obtenerProd();
+
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
@@ -21,7 +24,5 @@ const mostrarProductos = (productos) => {
         })
 
     })
-
 }
-
-mostrarProductos(productos)
+mostrarProductos();
