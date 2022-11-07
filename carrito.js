@@ -35,3 +35,7 @@ const pintarCarrito = (carrito) => {
         contenedorCarrito.appendChild(div)
     });
 };
+const boton = document.getElementById("vaciarCarrito");
+boton.addEventListener('click', () => {
+    carritoDeCompras.remove();
+})
